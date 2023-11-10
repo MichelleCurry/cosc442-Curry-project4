@@ -7,7 +7,7 @@ public class CoffeeMaker {
 	/** Array of recipes in coffee maker */
 	private Recipe [] recipeArray;
 	/** Number of recipes in coffee maker */
-	private final int NUM_RECIPES = 4;
+	final private int NUM_RECIPES = 4; 
 	/** Array describing if the array is full */
 	private boolean [] recipeFull;
 	/** Inventory of the coffee maker */
@@ -179,7 +179,7 @@ public class CoffeeMaker {
 		Recipe r = new Recipe();
 		for(int i = 0; i < NUM_RECIPES; i++) {
 			if(recipeArray[i].getName() != null) { 
-				if((recipeArray[i].getName()).equals(name)) {
+				if(recipeArray[i].getName().equals(name)) {
 					r = recipeArray[i];
 				}
 			}
