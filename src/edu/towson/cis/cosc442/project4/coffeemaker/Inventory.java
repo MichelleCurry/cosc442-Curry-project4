@@ -115,8 +115,7 @@ public class Inventory {
             isEnough = false;
         }
         if (Inventory.chocolate < r.getAmtChocolate()) {
-            isEnough = false;
-        }
+            isEnough = false;}
         return isEnough;
     }
     

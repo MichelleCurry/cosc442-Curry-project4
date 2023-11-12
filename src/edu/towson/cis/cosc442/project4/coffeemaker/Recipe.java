@@ -1,7 +1,5 @@
 package edu.towson.cis.cosc442.project4.coffeemaker;
 
-import java.util.Objects;
-
 /**
  * Recipe object for the coffee maker
  * @author Josh
@@ -129,20 +127,18 @@ public class Recipe {
      * @param r Recipe
      * @return boolean
      */
-
-public boolean equals(Object obj) {
-    if (this == obj) {
-        return true;
-    }
-    if (obj == null || getClass() != obj.getClass()) {
+    public boolean equals(Recipe r) {
+        if(r.getName() == null) {
+	    	return false;
+    	}	
+        if(this.name == null) {
+        	return false;
+        }
+        if((this.name).equals(r.getName())) {
+            return true;
+        }
         return false;
     }
-
-    Recipe r = (Recipe) obj;
-
-    // Use Objects.equals for null-safe comparison
-    return Objects.equals(this.name, r.getName());
-}
     /**
      * Method toString.
      * @return String
