@@ -30,14 +30,16 @@ public class Inventory {
      * Method setChocolate.
      * @param chocolate int
      */
-    public static void setChocolate(int chocolate) {
+    public static boolean setChocolate(int chocolate) {
+    	boolean ret = true;
     	if(chocolate >= 0) {
     		Inventory.chocolate = chocolate;
     	}
     	else {
     		Inventory.chocolate = 0;
+    		ret = false;
     	}
-        
+        return ret;
     }
     /**
      * Method getCoffee.
@@ -50,13 +52,16 @@ public class Inventory {
      * Method setCoffee.
      * @param coffee int
      */
-    public static void setCoffee(int coffee) {
+    public static boolean setCoffee(int coffee) {
+    	boolean ret = true;
     	if(coffee >= 0) {
     		Inventory.coffee = coffee;
     	}
     	else {
     		Inventory.coffee = 0;
+    		ret = false;
     	}
+    	return ret;
     }
     /**
      * Method getMilk.
@@ -69,13 +74,17 @@ public class Inventory {
      * Method setMilk.
      * @param milk int
      */
-    public static void setMilk(int milk) {
+    public static boolean setMilk(int milk) {
+    	boolean ret = true;
+
     	if(milk >= 0) {
     		Inventory.milk = milk;
     	}
     	else {
     		Inventory.milk = 0;
+    		ret = false;
     	}
+    	return ret;
     }
     /**
      * Method getSugar.
@@ -88,13 +97,16 @@ public class Inventory {
      * Method setSugar.
      * @param sugar int
      */
-    public static void setSugar(int sugar) {
+    public static boolean setSugar(int sugar) {
+    	boolean ret = true;
     	if(sugar >= 0) {
     		Inventory.sugar = sugar;
     	}
     	else {
     		Inventory.sugar = 0;
+    		ret = false;
     	}
+    	return ret;
     }
     
     /**

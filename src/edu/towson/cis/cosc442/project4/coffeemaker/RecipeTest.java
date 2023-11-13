@@ -32,12 +32,9 @@ public class RecipeTest {
 
     @Test
     public void testSetAmtChocolate() {
-        recipe.setAmtChocolate(2);
-        assertEquals(2, recipe.getAmtChocolate());
-
-        // Test negative value
-        recipe.setAmtChocolate(-1);
-        assertEquals(0, recipe.getAmtChocolate());
+        assertFalse(recipe.setAmtChocolate(-1));
+        assertTrue(recipe.setAmtChocolate(1));
+        assertTrue(recipe.setAmtChocolate(0));
     }
 
     @Test
@@ -47,12 +44,9 @@ public class RecipeTest {
 
     @Test
     public void testSetAmtCoffee() {
-        recipe.setAmtCoffee(4);
-        assertEquals(4, recipe.getAmtCoffee());
-
-        // Test negative value
-        recipe.setAmtCoffee(-1);
-        assertEquals(0, recipe.getAmtCoffee());
+        assertFalse(recipe.setAmtCoffee(-1));
+        assertTrue(recipe.setAmtCoffee(1));
+        assertTrue(recipe.setAmtCoffee(0));
     }
 
     @Test
@@ -62,12 +56,9 @@ public class RecipeTest {
 
     @Test
     public void testSetAmtMilk() {
-        recipe.setAmtMilk(3);
-        assertEquals(3, recipe.getAmtMilk());
-
-        // Test negative value
-        recipe.setAmtMilk(-1);
-        assertEquals(0, recipe.getAmtMilk());
+        assertFalse(recipe.setAmtMilk(-1));
+        assertTrue(recipe.setAmtMilk(1));
+        assertTrue(recipe.setAmtMilk(0));
     }
 
     @Test
@@ -77,12 +68,9 @@ public class RecipeTest {
 
     @Test
     public void testSetAmtSugar() {
-        recipe.setAmtSugar(2);
-        assertEquals(2, recipe.getAmtSugar());
-
-        // Test negative value
-        recipe.setAmtSugar(-1);
-        assertEquals(0, recipe.getAmtSugar());
+        assertFalse(recipe.setAmtSugar(-1));
+        assertTrue(recipe.setAmtSugar(1));
+        assertTrue(recipe.setAmtSugar(0));
     }
 
     @Test

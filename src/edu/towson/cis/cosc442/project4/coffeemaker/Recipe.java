@@ -24,13 +24,16 @@ public class Recipe {
      * Method setAmtChocolate.
      * @param amtChocolate int
      */
-    public void setAmtChocolate(int amtChocolate) {
+    public boolean setAmtChocolate(int amtChocolate) {
+    	boolean ret = true;
     	if(amtChocolate >= 0) {
     		this.amtChocolate = amtChocolate;
     	}
     	else {
     		this.amtChocolate = 0;
+    		ret = false;
     	}
+    	return ret;
     }
     /**
      * Method getAmtCoffee.
@@ -43,13 +46,16 @@ public class Recipe {
      * Method setAmtCoffee.
      * @param amtCoffee int
      */
-    public void setAmtCoffee(int amtCoffee) {
+    public boolean setAmtCoffee(int amtCoffee) {
+    	boolean ret = true;
     	if(amtCoffee >= 0) {
     		this.amtCoffee = amtCoffee;
     	}
     	else {
     		this.amtCoffee = 0;
+    		ret = false;
     	}
+    	return ret;
     }
     /**
      * Method getAmtMilk.
@@ -62,13 +68,16 @@ public class Recipe {
      * Method setAmtMilk.
      * @param amtMilk int
      */
-    public void setAmtMilk(int amtMilk) {
+    public boolean setAmtMilk(int amtMilk) {
+    	boolean ret = true;
     	if(amtMilk >= 0) {
     		this.amtMilk = amtMilk;
     	}
     	else {
     		this.amtMilk = 0;
+    		ret = false;
     	}
+    	return ret;
     }
     /**
      * Method getAmtSugar.
@@ -81,13 +90,16 @@ public class Recipe {
      * Method setAmtSugar.
      * @param amtSugar int
      */
-    public void setAmtSugar(int amtSugar) {
+    public boolean setAmtSugar(int amtSugar) {
+    	boolean ret = true;
     	if(amtSugar >= 0) {
     		this.amtSugar = amtSugar;
     	}
     	else {
     		this.amtSugar = 0;
+    		ret = false;
     	}
+    	return ret;
     }
     /**
      * Method getName.

@@ -104,13 +104,34 @@ public class CoffeeMakerTest extends TestCase {
     }
 
 	@Test
-	public void testAddInventory() {
-        // Add inventory with valid amounts
-        assertTrue(cm.addInventory(10, 5, 2, 0));
+	public void testAddInventory_InvalidAmounts() {
+	    // Try to add inventory with negative coffee amount
+	    assertFalse(cm.addInventory(-1, -1, -1, -1));
+	}
 
-        // Try to add inventory with invalid amounts
-        assertFalse(cm.addInventory(-5, 3, 1, -2));
-    }
+	@Test
+	public void testAddInventory_ValidAmounts() {
+	    // Add inventory with valid amounts
+	    assertTrue(cm.addInventory(1, 1, 1, 1));
+	    assertTrue(cm.addInventory(0, 0, 0, 0));
+	    assertTrue(cm.addInventory(10, 5, 2, 0));
+	}
+	
+	@Test
+	public void testAddInventory_checkAmt() {
+	    // Add inventory with valid amounts
+		int add = 1;
+		int coffee = i.getCoffee();
+		int milk = i.getMilk();
+		int sugar = i.getSugar();
+		int chocolate = i.getChocolate();
+		cm.addInventory(add, add, add, add);
+
+	    assertEquals(coffee+add, i.getCoffee());
+	    assertEquals(milk+add, i.getMilk());
+	    assertEquals(sugar+add, i.getSugar());
+	    assertEquals(chocolate+add, i.getChocolate());
+	}
 
 	@Test
 	public void testMakeCoffee() {

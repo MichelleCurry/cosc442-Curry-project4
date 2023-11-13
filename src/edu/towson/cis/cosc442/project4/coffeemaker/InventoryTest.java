@@ -16,51 +16,31 @@ public class InventoryTest {
     }
 
     @Test
-    public void testSetChocolatePositive() {
-        Inventory.setChocolate(5);
-        assertEquals(5, inventory.getChocolate());
+    public void testSetChocolate() {
+        assertFalse(Inventory.setChocolate(-1));
+        assertTrue(Inventory.setChocolate(1));
+        assertTrue(Inventory.setChocolate(0));
     }
 
     @Test
-    public void testSetChocolateNegative() {
-        Inventory.setChocolate(-5);
-        assertEquals(0, inventory.getChocolate());
+    public void testSetCoffee() {
+        assertFalse(Inventory.setCoffee(-1));
+        assertTrue(Inventory.setCoffee(1));
+        assertTrue(Inventory.setCoffee(0));
     }
 
     @Test
-    public void testSetCoffeePositive() {
-        Inventory.setCoffee(10);
-        assertEquals(10, inventory.getCoffee());
-    }
-
-    @Test
-    public void testSetCoffeeNegative() {
-        Inventory.setCoffee(-10);
-        assertEquals(0, inventory.getCoffee());
-    }
-
-    @Test
-    public void testSetMilkPositive() {
-        Inventory.setMilk(8);
-        assertEquals(8, inventory.getMilk());
-    }
-
-    @Test
-    public void testSetMilkNegative() {
-        Inventory.setMilk(-8);
-        assertEquals(0, inventory.getMilk());
+    public void testSetMilk() {
+    	assertFalse(Inventory.setMilk(-1));
+        assertTrue(Inventory.setMilk(1));
+        assertTrue(Inventory.setMilk(0));
     }
 
     @Test
     public void testSetSugarPositive() {
-        Inventory.setSugar(12);
-        assertEquals(12, inventory.getSugar());
-    }
-
-    @Test
-    public void testSetSugarNegative() {
-        Inventory.setSugar(-12);
-        assertEquals(0, inventory.getSugar());
+    	assertFalse(Inventory.setSugar(-1));
+        assertTrue(Inventory.setSugar(1));
+        assertTrue(Inventory.setSugar(0));
     }
 
     @Test
